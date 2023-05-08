@@ -5,7 +5,7 @@ import psycopg2
 # Uses st.cache_resource to only run once.
 @st.cache_resource
 def init_connection():
-    return psycopg2.connect(**st.secrets["DMQL_Project"])
+    return psycopg2.connect(**st.secrets["postgres"])
 
 conn = init_connection()
 
